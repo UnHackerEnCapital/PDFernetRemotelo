@@ -1,5 +1,3 @@
-![Un Hacker En Capital](https://path/to/generated/logo.png)
-
 # Un Hacker En Capital
 
 ¡Bienvenido a mi repositorio de GitHub! Soy **Un Hacker En Capital**, y aquí encontrarás todos los scripts y herramientas que uso en mis streams y videos. Únete a mí mientras exploramos el fascinante mundo de la ciberseguridad y la tecnología.
