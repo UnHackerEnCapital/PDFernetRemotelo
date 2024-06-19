@@ -36,3 +36,15 @@ En este repositorio, encontrarás:
 
 ```bash
 python3 PDFernetRemotelo.py
+```
+
+## Equipo Atacante
+
+```bash
+pnc -lvp 6565
+```
+
+
+## Disclaimer
+
+Este repositorio y su contenido tienen fines educativos y de investigación únicamente. El autor no se hace responsable del uso indebido de la información y herramientas proporcionadas. Por favor, utilice estos scripts de manera responsable y ética.
