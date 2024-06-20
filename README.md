@@ -41,7 +41,7 @@ python3 PDFernetRemotelo.py
 ## Equipo Atacante
 
 ```bash
-pnc -lvp 6565
+nc -lvp 6565
 ```
 
 
